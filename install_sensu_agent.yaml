@@ -1,7 +1,7 @@
 ---
 - name: "Install sensu-agent"
   become: true
-  hosts: localhost
+  hosts: all
   roles:
     - install_sensu_agent
 
