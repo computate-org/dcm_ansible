@@ -1,0 +1,4 @@
+collections:
+  - name: sensu.sensu_go
+    version: 1.14.0
+
