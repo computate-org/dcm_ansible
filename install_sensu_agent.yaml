@@ -1,12 +1,7 @@
 ---
 - name: "Install sensu-agent"
-  hosts: all
   become: true
   hosts: localhost
   roles:
-    - sensu.sensu_go.agent
-  vars:
-    agent_config:
-      name: "{{ result.hostName }}"
-      namespace: "{{ result.tenantId }}"
+    - install_sensu_agent
 

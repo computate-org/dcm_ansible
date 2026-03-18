@@ -1,0 +1,6 @@
+dependencies:
+  - role: sensu.sensu_go.agent
+    vars:
+      components:
+        - sensu-go-agent
+

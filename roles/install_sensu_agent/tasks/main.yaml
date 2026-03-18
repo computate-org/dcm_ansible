@@ -1,0 +1,13 @@
+- name: "Install sensu-agent"
+  include_role: 
+    name: sensu.sensu_go.agent
+  #sensu_go_ansible_agent: {}
+  vars:
+    agent_config:
+      name: "{{ hostName }}"
+      namespace: "{{ tenantId }}"
+      insecure-skip-tls-verify: true
+      user: '{{ sensuBackendUserName }}'
+      password: '{{ sensuBackendPassword }}'
+      backend-url: [ "wss://sensu-websocket.apps-crc.testing:443" ]
+
